@@ -5,7 +5,7 @@
 - Tested with Python 3.9.10, Numpy 1.22.1, and PIL 8.4.0, though older versions of any/all of these probably work
 
 ## How to run
-First, meet the system requirements. In the terminal, run `python3 rt.py <width> <height> <spp>`, where you supply the width and height of the final image,
+First, meet the system requirements. Next, download Hittable.py, Material.py, and rt.py. Then, in the terminal, run `python3 rt.py <width> <height> <spp>`, where you supply the width and height of the final image,
 and choose the samples per pixel. An appropriate range for spp is at least 1 and at most 10. The output image will be named "render.png".
 
 ## Overview of the program
@@ -34,5 +34,7 @@ After some profiling tests, this ray tracer actually seems to be bottlenecked by
 Hittable.py and Material.py is essentially Peter Shirley's C++ code which I translated and vectorized into Python and Numpy. On the other hand, everything in rt.py is completely original and done by me.
 
 ## Sample render
-
+Example render with metal, diffuse, and light materials.
 ![](sample.png)
+Another render with metal materials, using low recusion depth.
+![](sample2.png)
